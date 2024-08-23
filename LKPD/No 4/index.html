@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 4</title>
+</head>
+<body>
+        <label for="image">Pilih gambar:</label>
+        <select id="image" name="select1">
+          <option value="bali.jpg">Bali</option>
+          <option value="bandung.jpg">Bandung</option>
+          <option value="yogya.jpg">yogya</option>
+        </select>
+
+        <select id="opacity" name="opacity">
+          <option value="1">1</option>
+          <option value="0.5">0.5</option>
+          <option value="0.2">0.2</option>
+        </select>
+    
+    <input type="submit" value="change" onclick="tampilkan()">
+    <img id="imageDisplay" src="bali.jpg" alt="" style="opacity: 1; width: 300px;">
+
+
+</body>
+      <script>
+        
+        function tampilkan(){
+            
+        let image = document.getElementById("image");
+        let opacity = document.getElementById("opacity");
+        let imageDisplay = document.getElementById("imageDisplay");
+
+        let selectedImage = image.value;
+        let selectedOpacity = opacity.value;
+
+        imageDisplay.src = selectedImage;
+        imageDisplay.style.opacity = selectedOpacity;
+        }
+        </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No 6</title>
+</head>
+<body>
+      <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">Submit</button>
+    <p id="result">Tidak mencari data...</p>
+    
+    <script>
+function search() {
+  let input = document.getElementById("searchInput").value;
+  let result = document.getElementById("result");
+
+  if (input === "") {
+    result.innerHTML = "Tidak mencari data...";
+  } else {
+    result.innerHTML = "Mencari data " + input + "...";
+  }
+}
+</script>
+</body>
+</html>
